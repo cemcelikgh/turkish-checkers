@@ -1,0 +1,19 @@
+.numbers {
+  width: 2.75%;
+  aspect-ratio: 1 / 16;
+  background-color: var(--foreground);
+  border: var(--border);
+  border-left: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  container-type: inline-size;
+}
+
+.numbers > div {
+  background-color: var(--background);
+  font-size: 50cqw;
+  display: grid;
+  place-items: center;
+}

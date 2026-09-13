@@ -1,0 +1,13 @@
+.circle-bg {
+  width: 72%;
+  aspect-ratio: 1;
+  background-color: var(--panel-circle-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicator {
+  width: 67%;
+}

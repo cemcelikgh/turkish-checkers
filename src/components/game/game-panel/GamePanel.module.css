@@ -1,0 +1,10 @@
+.game-panel {
+  width: 6.5%;
+  aspect-ratio: 40.625 / 275;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  container-type: inline-size;
+}

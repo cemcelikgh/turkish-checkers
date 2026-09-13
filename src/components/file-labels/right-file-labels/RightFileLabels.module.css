@@ -1,0 +1,28 @@
+.labels {
+  width: 44%;
+  aspect-ratio: 16 / 1;
+  background-color: var(--foreground);
+  border: var(--border);
+  border-top: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  container-type: inline-size;
+}
+
+.labels > div {
+  background-color: var(--background);
+  font-size: 3cqw;
+  display: grid;
+  place-items: center;
+}
+
+.corner {
+  width: 2.75%;
+  aspect-ratio: 1;
+  background-color: var(--background);
+  border: var(--border);
+  border-top: none;
+  border-left: none;
+}
