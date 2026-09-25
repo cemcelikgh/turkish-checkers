@@ -9,7 +9,7 @@ import {
   Cell,
   ComputeCaptureMovesParams,
   GenerateCaptureMoveParams,
-  LastNineMoves,
+  LastMove,
   OnePiece,
   State,
 } from "./types";
@@ -47,7 +47,7 @@ function setInitialBoard() {
 }
 
 function setInitialLastNineMoves() {
-  const initialLastNineMoves : LastNineMoves = [];
+  const initialLastNineMoves : LastMove[] = [];
   for (let i = 0; i < 17; i += 2) {
     initialLastNineMoves.push({
       startSquare: 64 + i,
@@ -711,11 +711,12 @@ export const gameSlice = createSlice({
         }
       }
     },
-    resetGameState: () => initialState,
+    resetGame: () => initialState,
   },
 });
 
-export const { selectPiece, moveSelectedPiece, resetGameState } = gameSlice.actions;
+export const { selectPiece, moveSelectedPiece, resetGame } = gameSlice.actions;
+
 export const selectSquare = (index: number) => ( (state: RootState) => state.game.board[index] );
 export const selectIsWhiteTurn = (state: RootState) => state.game.isWhiteTurn;
 export const selectCapturedWhitePieceCount = (state: RootState) => state.game.capturedWhitePieceCount;
@@ -724,4 +725,5 @@ export const selectSelectedPieceIndex = (state: RootState) => state.game.selecte
 export const selectHasForcedMove = (state: RootState) => state.game.hasForcedMove;
 export const selectLastNineMoves = (state: RootState) => state.game.lastNineMoves;
 export const selectNoPieceCanMove = (state: RootState) => state.game.noPieceCanMove;
+
 export default gameSlice.reducer;

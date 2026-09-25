@@ -1,13 +1,9 @@
-export type SquareColor = 'white' | 'black';
-
-export type SquareSituation = null | 'selected-piece' | 'landing' | 'capturable-piece' | 'forced-piece';
-
 export type OnePiece = 'white-man' | 'black-man' | 'white-king' | 'black-king';
 
-export interface Square {
+interface Square {
   squareIndex: number;
-  squareColor: SquareColor;
-  squareSituation: SquareSituation;
+  squareColor: 'white' | 'black';
+  squareSituation: null | 'selected-piece' | 'landing' | 'capturable-piece' | 'forced-piece';
 }
 
 export interface Cell extends Square {
@@ -17,11 +13,9 @@ export interface Cell extends Square {
 export type Board = Cell[];
 
 export interface LastMove {
-    startSquare: number;
-    endSquare: number;
+  startSquare: number;
+  endSquare: number;
 }
-
-export type LastNineMoves = LastMove[];
 
 export interface State {
   board: Board;
@@ -31,13 +25,13 @@ export interface State {
   selectedPieceIndex: null | number;
   hasForcedMove: boolean;
   noPieceCanMove: boolean;
-  lastNineMoves: LastNineMoves;
+  lastNineMoves: LastMove[];
   lastMove: LastMove;
   movableSquaresOfKing: Cell[];
   validPaths: CapturePaths;
 }
 
-export type KingMoveDirection = 'forward' | 'right' | 'backward' | 'left';
+type KingMoveDirection = 'forward' | 'right' | 'backward' | 'left';
 
 export interface BoardAndTurn {
   board: Board;

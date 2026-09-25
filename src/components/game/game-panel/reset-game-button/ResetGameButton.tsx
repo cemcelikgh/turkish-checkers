@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import RotateSolid from './RotateSolid';
 import { selectHasForcedMove, selectSelectedPieceIndex }
   from '@/lib/features/game-slice/gameSlice';
-import { selectIsRightModal, setShowNewGameConfirm }
+import { selectIsRightModal, setIsResetConfirmationOpen }
   from '@/lib/features/controlsSlice';
 import styles from './ResetGameButton.module.css';
 
@@ -17,7 +17,7 @@ function NewGameButton() {
 
   function handleResetGame() {
     if(!selectedPieceIndex && !hasForcedMove && isRightModal === null) {
-      dispatch(setShowNewGameConfirm(true));
+      dispatch(setIsResetConfirmationOpen(true));
     }
   }
 

@@ -1,3 +1,5 @@
+import FullscreenButton
+  from "./fullscreen-button/FullscreenButton";
 import LeftFileLabels
   from "./left-file-labels/LeftFileLabels";
 import RightFileLabels
@@ -8,7 +10,7 @@ function FileLabels() {
   return (
     <div className={styles.labels}>
       <LeftFileLabels />
-      <div className={styles.space} />
+      <FullscreenButton />
       <RightFileLabels />
     </div>
   );

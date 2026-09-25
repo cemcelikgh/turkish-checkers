@@ -18,8 +18,7 @@ typescript
 
 Game rules
 <br>Aug 2026
-<br><https://turkdamasi.org.tr/wp-content/uploads/2022/11/Turk_Damasi_Kurallari_Tudaf_v3.pdf>
-<br><https://turkdamasi.org.tr/wp-content/uploads/2022/11/Turkish_Checkers_Rules_Tudaf.pdf>
+<br><https://turkdamasi.org.tr/turk-damasi-kurallari/>
 
 SVG icons
 <br>Sep 2026

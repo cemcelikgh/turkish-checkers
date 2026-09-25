@@ -25,27 +25,25 @@ function DrawOfferModal({ isWhiteSideBoard }: { isWhiteSideBoard: boolean; }) {
   const oppSide = isWhiteTurn ? 'siyah' : 'beyaz';
   const drawOfferMessage = `${offerSide} taraf, ${oppSide} tarafa beraberlik teklif etti.`;
 
-  function handleShowLeftModal() { dispatch(setIsRightModal(false)) }
-  function handleShowRightModal() { dispatch(setIsRightModal(true)) }
-  function handleRejectTheOffer() {
-    dispatch(setHasDrawOffer(false));
-    dispatch(setIsRightModal(null));
-  }
   function handleAcceptTheOffer() {
     dispatch(setHasDrawOffer(false));
     dispatch(setIsDrawGame(true));
   }
+  function handleRejectTheOffer() {
+    dispatch(setHasDrawOffer(false));
+    dispatch(setIsRightModal(null));
+  }
 
   if (isRightModal) {
     if (isWhiteSideBoard) {
-      return <div className={styles.unclickable}></div>;
+      return <div className={styles.unclickable} />;
     } else {
       return (
         <div className={`${styles['draw-offer']} ${styles['black-side']}`}>
           <div>{drawOfferMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={handleShowLeftModal}
+            onClick={ () => { dispatch(setIsRightModal(false)) } }
           >
             Oyuna siyah taraftan bak.
             <ChessBoardSolid className={styles['chess-board']} />
@@ -71,7 +69,7 @@ function DrawOfferModal({ isWhiteSideBoard }: { isWhiteSideBoard: boolean; }) {
           <div>{drawOfferMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={handleShowRightModal}
+            onClick={ () => { dispatch(setIsRightModal(true)) } }
           >
             <CaretLeft className={styles.caret} />
             <ChessBoardSolid className={styles['chess-board']} />
@@ -90,7 +88,7 @@ function DrawOfferModal({ isWhiteSideBoard }: { isWhiteSideBoard: boolean; }) {
         </div>
       );
     } else {
-      return <div className={styles.unclickable}></div>;
+      return <div className={styles.unclickable} />;
     }
   }
 

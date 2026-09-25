@@ -3,7 +3,7 @@
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { resetControlsState, selectIsRightModal, setIsRightModal }
   from '@/lib/features/controlsSlice';
-import { resetGameState } from '@/lib/features/game-slice/gameSlice';
+import { resetGame } from '@/lib/features/game-slice/gameSlice';
 import CaretLeft from '../../icons/CaretLeft';
 import ChessBoardSolid from '../../icons/ChessBoardSolid';
 import CaretRight from '../../icons/CaretRight';
@@ -21,23 +21,21 @@ function GameResulModal({
   const isRightModal = useAppSelector(selectIsRightModal);
   const dispatch = useAppDispatch();
 
-  function handleShowLeftModal() { dispatch(setIsRightModal(false)) }
-  function handleShowRightModal() { dispatch(setIsRightModal(true)) }
   function handleStartNewGame() {
-    dispatch(resetGameState());
+    dispatch(resetGame());
     dispatch(resetControlsState());
   }
 
   if(isRightModal) {
     if (isWhiteSideBoard) {
-      return <div className={styles.unclickable}></div>;
+      return <div className={styles.unclickable} />;
     } else {
       return (
         <div className={`${styles['game-result']} ${styles['black-side']}`}>
           <div>{resultMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={handleShowLeftModal}
+            onClick={ () => { dispatch(setIsRightModal(false)) } }
           >
             Oyun sonu tahtasına beyaz taraftan bak.
             <ChessBoardSolid className={styles['chess-board']} />
@@ -60,7 +58,7 @@ function GameResulModal({
           <div>{resultMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={handleShowRightModal}
+            onClick={ () => { dispatch(setIsRightModal(true)) } }
           >
             <CaretLeft className={styles.caret} />
             <ChessBoardSolid className={styles['chess-board']} />
@@ -76,7 +74,7 @@ function GameResulModal({
         </div>
       );
     } else {
-      return <div className={styles.unclickable}></div>;
+      return <div className={styles.unclickable} />;
     }
   }
 
