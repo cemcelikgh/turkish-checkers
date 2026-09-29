@@ -1,0 +1,33 @@
+.selector {
+  width: 6.5%;
+  aspect-ratio: 6.5 / 2.75;
+  background-color: var(--background);
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  height: 85%;
+  aspect-ratio: 1;
+  appearance: none;
+  padding: 0;
+  background-color: var(--theme-btn);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--selected-theme-btn);
+}
+
+.btn > svg {
+  height: 80%;
+  aspect-ratio: 1;
+  margin-top: 9%;
+  fill: var(--theme-icon);
+}
+
+.selected > svg {
+  fill: var(--selected-theme-icon);
+}

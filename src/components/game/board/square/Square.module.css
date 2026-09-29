@@ -1,3 +1,14 @@
+.white,
+.black,
+.selected-piece,
+.landing,
+.forced-piece,
+.capturable-piece {
+  display: grid;
+  place-items: center;
+
+}
+
 .white {
   background-color: var(--white-square);
 }
@@ -6,71 +17,45 @@
   background-color: var(--black-square);
 }
 
-.white-man {
-  width: 80%;
-  height: 80%;
-  margin: 10% 0 0 10%;
-  border-radius: 50%;
-  background-color: #fff;
-  z-index: 3;
-  cursor: pointer;
-}
-
-.black-man {
-  width: 80%;
-  height: 80%;
-  margin: 10% 0 0 10%;
-  border-radius: 50%;
-  background-color: #000;
-  z-index: 3;
-  cursor: pointer;
-}
-
-.white-king {
-  width: 80%;
-  height: 80%;
-  margin: 10% 0 0 10%;
-  background: radial-gradient(circle, #fff 45%, #777 50%, #fff 55%);
-  border-radius: 50%;
-  z-index: 3;
-  cursor: pointer;
-}
-
-.black-king {
-  width: 80%;
-  height: 80%;
-  margin: 10% 0 0 10%;
-  background: radial-gradient(circle, #000 45%, #383838 50%, #000 55%);
-  border-radius: 50%;
-  z-index: 3;
-  cursor: pointer;
-}
-
 .selected-piece {
-  width: 100%;
-  height: 100%;
   background-color: var(--square-of-selected-piece);
-  z-index: 2;
 }
 
 .landing {
-  width: 100%;
-  height: 100%;
   background-color: var(--landing-square);
-  z-index: 2;
   cursor: pointer;
 }
 
 .forced-piece {
-  width: 100%;
-  height: 100%;
   background-color: var(--square-of-forced-piece);
-  z-index: 2;
 }
 
 .capturable-piece {
-  width: 100%;
-  height: 100%;
   background-color: var(--square-of-capturable-piece);
-  z-index: 2;
+}
+
+.white-man,
+.black-man,
+.white-king,
+.black-king {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.white-man {
+  background-color: #fff;
+}
+
+.black-man {
+  background-color: #000;
+}
+
+.white-king {
+  background: radial-gradient(circle, #fff 45%, #000 50%, #fff 55%);
+}
+
+.black-king {
+  background: radial-gradient(circle, #000 46%, #cccccc 50%, #000 54%);
 }

@@ -109,30 +109,30 @@ function selectMan(state: State, index: number) {
 
 function moveSelectedMan(state: State, index: number) {
 
-    const selectedPieceIndex = state.selectedPieceIndex!;
-    const offset = state.board[selectedPieceIndex].onePiece === 'white-man' ? -8 : 8;
+  const selectedPieceIndex = state.selectedPieceIndex!;
+  const offset = state.board[selectedPieceIndex].onePiece === 'white-man' ? -8 : 8;
 
-    state.board[index].onePiece = state.board[selectedPieceIndex].onePiece;
-    state.board[selectedPieceIndex].onePiece = null;
+  state.board[index].onePiece = state.board[selectedPieceIndex].onePiece;
+  state.board[selectedPieceIndex].onePiece = null;
 
-    state.board[selectedPieceIndex].squareSituation = null;
-    state.board[selectedPieceIndex + offset].squareSituation = null;
-    state.board[selectedPieceIndex + 1].squareSituation = null;
-    state.board[selectedPieceIndex - 1].squareSituation = null;
+  state.board[selectedPieceIndex].squareSituation = null;
+  state.board[selectedPieceIndex + offset].squareSituation = null;
+  state.board[selectedPieceIndex + 1].squareSituation = null;
+  state.board[selectedPieceIndex - 1].squareSituation = null;
 
-    if (
-      state.board[index].onePiece === 'white-man'
-      && [0, 1, 2, 3, 4, 5, 6, 7].includes(index)
-    ) state.board[index].onePiece = 'white-king';
-    else if (
-      state.board[index].onePiece === 'black-man' &&
-      [56, 57, 58, 59, 60, 61, 62, 63].includes(index)
-    ) state.board[index].onePiece = 'black-king';
+  if (
+    state.board[index].onePiece === 'white-man'
+    && [0, 1, 2, 3, 4, 5, 6, 7].includes(index)
+  ) state.board[index].onePiece = 'white-king';
+  else if (
+    state.board[index].onePiece === 'black-man' &&
+    [56, 57, 58, 59, 60, 61, 62, 63].includes(index)
+  ) state.board[index].onePiece = 'black-king';
 
-    state.selectedPieceIndex = null;
-    state.isWhiteTurn = !state.isWhiteTurn;
-    updateLastNineMoves(state, index);
-    analizeBoard(state);
+  state.selectedPieceIndex = null;
+  state.isWhiteTurn = !state.isWhiteTurn;
+  updateLastNineMoves(state, index);
+  analizeBoard(state);
 
 }
 
@@ -187,19 +187,19 @@ function selectKing(state: State, index: number) {
 
 function moveSelectedKing(state: State, index: number) {
 
-    const selectedPieceIndex = state.selectedPieceIndex!;
+  const selectedPieceIndex = state.selectedPieceIndex!;
 
-    state.board[index].onePiece = state.board[selectedPieceIndex].onePiece;
-    state.board[selectedPieceIndex].onePiece = null;
+  state.board[index].onePiece = state.board[selectedPieceIndex].onePiece;
+  state.board[selectedPieceIndex].onePiece = null;
 
-    state.board[selectedPieceIndex].squareSituation = null;
-    state.movableSquaresOfKing.forEach(cell => { state.board[cell.squareIndex].squareSituation = null });
+  state.board[selectedPieceIndex].squareSituation = null;
+  state.movableSquaresOfKing.forEach(cell => { state.board[cell.squareIndex].squareSituation = null });
 
-    state.movableSquaresOfKing = [];
-    state.selectedPieceIndex = null;
-    state.isWhiteTurn = !state.isWhiteTurn;
-    updateLastNineMoves(state, index);
-    analizeBoard(state);
+  state.movableSquaresOfKing = [];
+  state.selectedPieceIndex = null;
+  state.isWhiteTurn = !state.isWhiteTurn;
+  updateLastNineMoves(state, index);
+  analizeBoard(state);
 
 }
 
@@ -717,7 +717,7 @@ export const gameSlice = createSlice({
 
 export const { selectPiece, moveSelectedPiece, resetGame } = gameSlice.actions;
 
-export const selectSquare = (index: number) => ( (state: RootState) => state.game.board[index] );
+export const selectSquare = (index: number) => (state: RootState) => state.game.board[index];
 export const selectIsWhiteTurn = (state: RootState) => state.game.isWhiteTurn;
 export const selectCapturedWhitePieceCount = (state: RootState) => state.game.capturedWhitePieceCount;
 export const selectCapturedBlackPieceCount = (state: RootState) => state.game.capturedBlackPieceCount;

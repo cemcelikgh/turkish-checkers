@@ -1,12 +1,12 @@
 'use client';
 
-import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { resetControlsState, selectIsRightModal, setIsRightModal }
   from '@/lib/features/controlsSlice';
 import { resetGame } from '@/lib/features/game-slice/gameSlice';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import CaretLeft from '../../icons/CaretLeft';
-import ChessBoardSolid from '../../icons/ChessBoardSolid';
 import CaretRight from '../../icons/CaretRight';
+import ChessBoardSolid from '../../icons/ChessBoardSolid';
 import RotateSolid from '../../icons/RotateSolid';
 import styles from './GameResulModal.module.css';
 
@@ -35,7 +35,7 @@ function GameResulModal({
           <div>{resultMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={ () => { dispatch(setIsRightModal(false)) } }
+            onClick={() => { dispatch(setIsRightModal(false)) }}
           >
             Oyun sonu tahtasına beyaz taraftan bak.
             <ChessBoardSolid className={styles['chess-board']} />
@@ -58,7 +58,7 @@ function GameResulModal({
           <div>{resultMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={ () => { dispatch(setIsRightModal(true)) } }
+            onClick={() => { dispatch(setIsRightModal(true)) }}
           >
             <CaretLeft className={styles.caret} />
             <ChessBoardSolid className={styles['chess-board']} />

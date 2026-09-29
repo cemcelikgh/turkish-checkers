@@ -6,7 +6,9 @@ function LeftRankLabels() {
   return (
     <div className={styles.numbers}>
       {numbers.map(number =>
-      <div key={number}>{number}</div>)}
+      <div className={styles.number} key={number}>
+        {number}
+      </div>)}
     </div>
   );
 }

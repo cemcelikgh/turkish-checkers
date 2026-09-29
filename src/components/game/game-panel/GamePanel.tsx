@@ -4,8 +4,8 @@ import CapturedWhitePieces
   from "./captured-white-pieces/CapturedWhitePieces";
 import DrawOfferButton
   from "./draw-offer-button/DrawOfferButton";
-import ResetGameButton
-  from "./reset-game-button/ResetGameButton";
+import FullscreenButton
+  from "./fullscreen-button/FullscreenButton";
 import TurnIndicator
   from "./turn-indicator/TurnIndicator";
 import styles from "./GamePanel.module.css";
@@ -13,7 +13,7 @@ import styles from "./GamePanel.module.css";
 function GamePanel() {
   return (
     <div className={styles["game-panel"]}>
-      <ResetGameButton />
+      <FullscreenButton />
       <DrawOfferButton />
       <TurnIndicator />
       <CapturedBlackPiecess />

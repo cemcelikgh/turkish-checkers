@@ -3,20 +3,18 @@
   aspect-ratio: 1;
   background-color: var(--panel-circle-bg);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .captured-white-pieces {
   width: 93%;
   aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
   font-size: 36cqw;
   font-weight: 600;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
 }

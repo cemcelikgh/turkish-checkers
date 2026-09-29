@@ -1,11 +1,11 @@
 'use client';
 
-import { useAppDispatch, useAppSelector } from '@/lib/hooks';
-import HandshakeSolid from './HandshakeSolid';
 import { selectHasForcedMove, selectIsWhiteTurn, selectSelectedPieceIndex }
   from '@/lib/features/game-slice/gameSlice';
 import { selectIsRightModal, setHasDrawOffer, setIsRightModal }
   from '@/lib/features/controlsSlice';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import HandshakeSolid from './HandshakeSolid';
 import styles from './DrawOfferButton.module.css';
 
 function DrawOfferButton() {
@@ -31,7 +31,7 @@ function DrawOfferButton() {
   }
 
   return (
-    <div
+    <button
       className={styles['circle-bg']}
       title={`${oppSide} tarafa beraberlik teklif et`}
     >
@@ -39,7 +39,7 @@ function DrawOfferButton() {
         className={styles.handshake}
         onClick={() => { handleDrawOffer() }}
       />
-    </div>
+    </button>
   );
 
 }

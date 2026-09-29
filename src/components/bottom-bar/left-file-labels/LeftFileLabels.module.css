@@ -11,18 +11,9 @@
   container-type: inline-size;
 }
 
-.labels > div {
-  background-color: var(--background);
+.label {
+  background-color: var(--label-bg);
   font-size: 3cqw;
   display: grid;
   place-items: center;
-}
-
-.corner {
-  width: 2.75%;
-  aspect-ratio: 1;
-  background-color: var(--background);
-  border: var(--border);
-  border-top: none;
-  border-left: none;
 }

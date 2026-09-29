@@ -1,7 +1,7 @@
 'use client';
 
-import { useAppSelector } from '@/lib/hooks';
 import { selectCapturedWhitePieceCount } from '@/lib/features/game-slice/gameSlice';
+import { useAppSelector } from '@/lib/hooks';
 import styles from './CapturedWhitePieces.module.css';
 
 function CapturedWhitePieces() {
@@ -11,14 +11,15 @@ function CapturedWhitePieces() {
   return (
     <div
       className={styles['circle-bg']}
-      title='Alınan beyaz taş sayısı'  
+      title={`Siyah taraf ${capturedWhitePieceCount} beyaz taş aldı`}
     >
-      {(capturedWhitePieceCount > 0) &&
+      {capturedWhitePieceCount > 0 &&
       <div className={styles['captured-white-pieces']}>
         {capturedWhitePieceCount}
       </div>}
     </div>
   );
+
 }
 
 export default CapturedWhitePieces;

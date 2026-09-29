@@ -5,4 +5,4 @@ Patika Intermediate Frontend Web Development Path Certification Task
 
 Display: <https://turkishcheckers.netlify.app/>
 
-[![Turkish Checkers Preview](./public/images/ui-previews/turkish-checkers.png "Display Turkish Checkers")](https://turkishcheckers.netlify.app/)
+[![Turkish Checkers Preview](./public/ui-previews/themes.png "Display Turkish Checkers")](https://turkishcheckers.netlify.app/)

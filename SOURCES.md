@@ -23,3 +23,7 @@ Game rules
 SVG icons
 <br>Sep 2026
 <br><https://fontawesome.com/icons>
+
+Fullscreen toggle icons
+<br>Sep 2026
+<br><https://fonts.google.com/icons>

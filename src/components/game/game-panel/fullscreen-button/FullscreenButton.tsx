@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import MaximizeSolidFull from './icons/MaximizeSolidFull';
-import MinimizeSolidFull from './icons/MinimizeSolidFull';
+import ExitFullscreen from './icons/ExitFullscreen';
+import ScreenshotMonitor from './icons/ScreenshotMonitor';
 import styles from './FullscreenButton.module.css';
 
 function FullscreenButton() {
@@ -16,24 +16,25 @@ function FullscreenButton() {
 
   useEffect(() => {
 
-    function handleFullscreenChange() {
+    function fullscreenChangeHandler() {
       setIsFullscreen(Boolean(document.fullscreenElement));
     }
 
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('fullscreenchange', fullscreenChangeHandler);
 
     return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('fullscreenchange', fullscreenChangeHandler);
     }
 
   }, []);
 
   return (
-    <button 
+    <button
       className={styles.btn}
       onClick={toggleFullscreen}
+      title={isFullscreen ? 'Normal ekrana geç' : 'Tam ekrana geç'}
     >
-      {isFullscreen ? <MinimizeSolidFull /> : <MaximizeSolidFull />}
+      {isFullscreen ? <ExitFullscreen /> : <ScreenshotMonitor />}
     </button>
   );
 }

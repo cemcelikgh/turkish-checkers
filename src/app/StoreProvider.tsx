@@ -3,6 +3,7 @@
 import { AppStore, makeStore } from '@/lib/store';
 import { Provider } from 'react-redux';
 import { useState } from 'react';
+import Html from './Html';
 
 function StoreProvider({
   children,
@@ -14,7 +15,9 @@ function StoreProvider({
 
   return (
     <Provider store={store}>
-      {children}
+      <Html>
+        {children}
+      </Html>
     </Provider>
   );
 

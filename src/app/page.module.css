@@ -2,5 +2,4 @@
   width: min(99vw, calc(99vh * (18.2 / 8.5)));
   aspect-ratio: 18.2 / 8.5;
   position: relative;
-  container-type: inline-size;
 }

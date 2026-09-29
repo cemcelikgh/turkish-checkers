@@ -11,8 +11,8 @@
   container-type: inline-size;
 }
 
-.numbers > div {
-  background-color: var(--background);
+.number {
+  background-color: var(--label-bg);
   font-size: 50cqw;
   display: grid;
   place-items: center;

@@ -1,8 +1,8 @@
 'use client';
 
-import { useAppSelector } from '@/lib/hooks';
 import { selectIsWhiteTurn }
   from '@/lib/features/game-slice/gameSlice';
+import { useAppSelector } from '@/lib/hooks';
 import LeftLongSolid from './icons/LeftLongSolid';
 import RightLongSolid from './icons/RightLongSolid';
 import styles from './TurnIndicator.module.css';
@@ -21,7 +21,7 @@ function TurnIndicator() {
     :
     <div
       className={styles['circle-bg']}
-      title='Oynama sırası siyah tarafta'  
+      title='Oynama sırası siyah tarafta'
     >
       <RightLongSolid className={styles.indicator} />
     </div>

@@ -3,8 +3,8 @@
 import {
   selectHasDrawOffer, selectIsRightModal, setHasDrawOffer, setIsDrawGame, setIsRightModal,
 } from '@/lib/features/controlsSlice';
-import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { selectIsWhiteTurn } from '@/lib/features/game-slice/gameSlice';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import CaretLeft from '../icons/CaretLeft';
 import ChessBoardSolid from '../icons/ChessBoardSolid';
 import CaretRight from '../icons/CaretRight';
@@ -43,7 +43,7 @@ function DrawOfferModal({ isWhiteSideBoard }: { isWhiteSideBoard: boolean; }) {
           <div>{drawOfferMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={ () => { dispatch(setIsRightModal(false)) } }
+            onClick={() => { dispatch(setIsRightModal(false)) }}
           >
             Oyuna siyah taraftan bak.
             <ChessBoardSolid className={styles['chess-board']} />
@@ -69,7 +69,7 @@ function DrawOfferModal({ isWhiteSideBoard }: { isWhiteSideBoard: boolean; }) {
           <div>{drawOfferMessage}</div>
           <div
             className={styles['select-view-side']}
-            onClick={ () => { dispatch(setIsRightModal(true)) } }
+            onClick={() => { dispatch(setIsRightModal(true)) }}
           >
             <CaretLeft className={styles.caret} />
             <ChessBoardSolid className={styles['chess-board']} />

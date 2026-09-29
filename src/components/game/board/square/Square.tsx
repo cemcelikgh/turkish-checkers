@@ -1,7 +1,7 @@
 'use client';
 
-import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { moveSelectedPiece, selectPiece, selectSquare } from '@/lib/features/game-slice/gameSlice';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import styles from './Square.module.css';
 
 function Square({ squareIndex, isWhiteSideBoard }: { squareIndex: number; isWhiteSideBoard: boolean; }) {

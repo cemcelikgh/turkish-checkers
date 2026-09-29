@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import StoreProvider from "./StoreProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,9 +13,9 @@ function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
-      <body>{children}</body>
-    </html>
+    <StoreProvider>
+      {children}
+    </StoreProvider>
   );
 }
 

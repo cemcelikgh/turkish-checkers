@@ -1,7 +1,7 @@
 'use client';
 
-import { useAppSelector } from '@/lib/hooks';
 import { selectCapturedBlackPieceCount } from '@/lib/features/game-slice/gameSlice';
+import { useAppSelector } from '@/lib/hooks';
 import styles from './CapturedBlackPieces.module.css';
 
 function CapturedBlackPieces() {
@@ -11,9 +11,9 @@ function CapturedBlackPieces() {
   return (
     <div
       className={styles['circle-bg']}
-      title='Alınan siyah taş sayısı'  
+      title={`Beyaz taraf ${capturedBlackPieceCount} siyah taş aldı`}
     >
-      {(capturedBlackPieceCount > 0) &&
+      {capturedBlackPieceCount > 0 &&
       <div className={styles['captured-black-pieces']}>
         {capturedBlackPieceCount}
       </div>}

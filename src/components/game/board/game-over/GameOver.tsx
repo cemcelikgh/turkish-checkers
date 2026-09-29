@@ -8,8 +8,8 @@ import {
   selectSelectedPieceIndex,
   selectIsWhiteTurn,
 } from '@/lib/features/game-slice/gameSlice';
-import { useAppSelector } from '@/lib/hooks';
 import { selectIsDrawGame } from '@/lib/features/controlsSlice';
+import { useAppSelector } from '@/lib/hooks';
 import GameResulModal from './game-over-modal/GameResulModal';
 
 function GameOver({ isWhiteSideBoard }: { isWhiteSideBoard: boolean; }) {

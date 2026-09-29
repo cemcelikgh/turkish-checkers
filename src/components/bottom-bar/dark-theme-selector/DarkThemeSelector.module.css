@@ -1,0 +1,36 @@
+.selector {
+  width: 2.75%;
+  aspect-ratio: 1;
+  background-color: var(--label-bg);
+  border: var(--border);
+  border-top: none;
+  border-left: none;
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  width: 75%;
+  aspect-ratio: 1;
+  appearance: none;
+  padding: 0;
+  background-color: var(--theme-btn);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--selected-theme-btn);
+}
+
+.btn > svg {
+  width: 80%;
+  aspect-ratio: 1;
+  margin: 10% auto auto 10%;
+  fill: var(--theme-icon);
+}
+
+.selected > svg {
+  fill: var(--selected-theme-icon);
+}

@@ -1,0 +1,18 @@
+.btn {
+  width: 72%;
+  aspect-ratio: 1;
+  appearance: none;
+  padding: 0;
+  background-color: var(--panel-circle-bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.btn > svg {
+  width: 60%;
+  margin-top: 2%;
+  fill: var(--foreground);
+}

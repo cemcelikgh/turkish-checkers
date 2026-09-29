@@ -1,15 +1,17 @@
 .circle-bg {
   width: 72%;
   aspect-ratio: 1;
+  appearance: none;
+  padding: 0;
   background-color: var(--panel-circle-bg);
+  border: none;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 
 .handshake {
   width: 60%;
-  margin-top: 5%;
+  margin-top: 8%;
 }
