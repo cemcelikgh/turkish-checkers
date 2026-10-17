@@ -9,9 +9,10 @@ import styles from "./LightThemeSelector.module.css";
 function LightThemeSelector() {
 
   const themePreference = useAppSelector(selectThemePreference);
-  const isLightTheme = themePreference === 'light';
   const dispatch = useAppDispatch();
-  
+
+  const isLightTheme = themePreference === 'light';
+
   function handleSetLightTheme() {
     dispatch(setTheme('light'));
     dispatch(setThemePreference('light'));

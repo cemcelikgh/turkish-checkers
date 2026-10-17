@@ -9,9 +9,10 @@ import styles from "./DarkThemeSelector.module.css";
 function DarkThemeSelector() {
 
   const themePreference = useAppSelector(selectThemePreference);
-  const isDarkTheme = themePreference === 'dark';
   const dispatch = useAppDispatch();
-  
+
+  const isDarkTheme = themePreference === 'dark';
+
   function handleSetLightTheme() {
     dispatch(setTheme('dark'));
     dispatch(setThemePreference('dark'));

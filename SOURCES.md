@@ -16,6 +16,11 @@ typescript
 <br>Sep 2026
 <br><https://www.typescriptlang.org/download/>
 
+eslint
+<br>eslint-config-next
+<br>Sep 2026
+<br><https://eslint.org/docs/latest/use/getting-started>
+
 Game rules
 <br>Aug 2026
 <br><https://turkdamasi.org.tr/turk-damasi-kurallari/>

@@ -1,6 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../store";
-import {
+import type {
   Board,
   BoardAndTurn,
   CaptureMove,
@@ -13,6 +11,9 @@ import {
   OnePiece,
   State,
 } from "./types";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from "../../store";
+import { createSlice } from "@reduxjs/toolkit";
 
 // initial state functions - start
 

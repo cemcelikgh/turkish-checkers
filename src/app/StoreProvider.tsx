@@ -1,6 +1,7 @@
 'use client';
 
-import { AppStore, makeStore } from '@/lib/store';
+import type { AppStore } from '@/lib/store';
+import { makeStore } from '@/lib/store';
 import { Provider } from 'react-redux';
 import { useState } from 'react';
 import Html from './Html';

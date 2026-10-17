@@ -21,7 +21,7 @@ function Html({
         {theme &&
         <link
           rel="icon"
-          href={`/theme-icons/${theme}-board.svg`}
+          href={`/favicons/${theme}-board.svg`}
           type="image/svg+xml"
         />}
       </head>

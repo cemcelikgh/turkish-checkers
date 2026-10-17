@@ -11,9 +11,10 @@ import styles from "./SystemThemeSelector.module.css";
 function SystemThemeSelector() {
 
   const themePreference = useAppSelector(selectThemePreference);
-  const isSystemTheme = themePreference === 'system';
   const prefersColorSchemeRef = useRef<Theme>(null);
   const dispatch = useAppDispatch();
+
+  const isSystemTheme = themePreference === 'system';
 
   useEffect(() => {
 

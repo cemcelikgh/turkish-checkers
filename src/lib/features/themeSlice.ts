@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../store";
-import { Theme } from "@/types/types";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from "../store";
+import type { Theme } from "@/types/types";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: {
   theme: Theme | undefined;
